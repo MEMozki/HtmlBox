@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Execution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Результат исполнения кода</h1>
+    <iframe id="output"></iframe>
+
+    <script>
+        const code = localStorage.getItem("htmlCode");  // Получаем код из localStorage
+        const iframe = document.getElementById("output");
+        iframe.contentDocument.open();
+        iframe.contentDocument.write(code);
+        iframe.contentDocument.close();
+    </script>
+
+</body>
+</html>
